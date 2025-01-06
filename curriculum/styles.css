@@ -1,0 +1,142 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+header {
+  background-color: #305872;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: relative; /* Agrega posición relativa para posicionar la etiqueta */
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+section {
+  background-color: #ecf0f1;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.dark-mode-toggle-container {
+  position: absolute; /* Cambia a posición absoluta */
+  top: 50%; /* Centra verticalmente en el header */
+  right: 20px;
+  transform: translateY(-50%); /* Centra verticalmente en el header */
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  position: relative;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.toggle-label {
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dark-mode-toggle-container.dark-mode .toggle-label {
+  color: #ecf0f1;
+}
+footer {
+  background-color: #305872; /* Color de fondo en modo claro */
+  color: #fff; /* Color del texto en modo claro */
+  padding: 10px;
+  text-align: center;
+  position: relative;
+}
+
+body.dark-mode footer {
+  background-color: #305872; /* Color de fondo en modo oscuro */
+  color: #ecf0f1; /* Color del texto en modo oscuro */
+}
